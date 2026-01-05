@@ -17,22 +17,18 @@ By default the application will boost CS 1.6 and CS:GO. The boosted game can be 
 Install a (version `>= 8.9.0`) `node` and `pm2`. Clone the steamhourboostv2 repository and install dependencies:
 
 ```bash
-apt-get update -yq                                                    && \
-apt-get install -yq git make curl                                     && \
-curl -L https://git.io/n-install | N_PREFIX=~/.n bash -s -- -y latest && \
-source /root/.bashrc                                                  && \
-npm install -g pm2 yarn                                               && \
-cd ~                                                                  && \
 git clone https://github.com/frk1/steamhourboostv2.git                && \
 cd steamhourboostv2                                                   && \
-yarn install --production                                             && \
-clear                                                                 && \
-echo "Done. Run 'npm run user' to add users!"
+npm i
+npm run user
+npm run app
 ```
 
-### Usage
+### FIX
 
-Accounts can be added with `npm run user`. Start the script using `pm2`:
+`Fix Steam persona state so hours are actually counted`
+`Add interactive Steam Guard support`
+`Improve login flow reliability`
 
 ```bash
 # Start boosting and telegram bot
